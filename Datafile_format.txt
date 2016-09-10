@@ -1,0 +1,27 @@
+CSV file of all ticks in the exchange (tick = all orders on that instrument)
+Field 1: Timestamp
+Field 2: Exchange timestamp in milliseconds
+Field 3: Message Sequence Number
+Field 4: Ignore
+Field 5: Type of order (N = New, X = Cancel, T = Trade reported, M = Modified)
+Field 6: Buy or Sell side on which this order arrived.
+Field 7: Quantity available on Best Buy Price
+Field 8: Best Buy Price
+Field 9: Best Sell Price
+Field 10: Quantity available on Best Sell Price
+Field 11-14: Same as fields 7-10, but for 2nd best prices on buy and sell side
+Field 15-18: Same as fields 7-10, but for 3rd best prices on buy and sell side
+Field 19-22: Same as fields 7-10, but for 4th best prices on buy and sell side
+Field 23-26: Same as fields 7-10, but for 5th best prices on buy and sell side
+Field 27-30: Current order info 
+(
+In case of N: field 27 = New Order Price, field 28 = New Order qty
+In case of M: field 27 = Modified Price, field 28 = Modified qty, field 29 = Previous Price, field 30 = Previous qty of modified order
+In case of T: field 27 = Trade Price, field 28 = Traded qty
+In case of X: field 27 = Cancelled order Price, field 28 = cancelled order qty
+)
+Fields 31-34: Ignore (or if you can figure out what they are then that will be wonderful)
+Field 35: Number of trades on buy side since start of day.
+Field 36: Number of trades on sell side since start of day.
+Field 37: Volume of trades on buy side since start of day.
+Field 38: Volume of trades on sell side since start of day.
